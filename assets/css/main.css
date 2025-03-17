@@ -1767,4 +1767,12 @@ input, select, textarea {
 		  /* Add this to your main.css file */
 		.logo .diamond-removed:before {
 			content: "";
-		}	
+		}
+		
+		/* Remove dark overlay from the main 'About Me' photo */
+		.image.main::before {
+			background-image: none !important;   /* Remove overlay.png */
+			background-color: transparent !important;  /* Remove black tint */
+			opacity: 0 !important;              /* Ensure no leftover opacity */
+		}
+		
