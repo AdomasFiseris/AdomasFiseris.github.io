@@ -1,301 +1,149 @@
-<!DOCTYPE HTML>
-<!--
-  Dimension by HTML5 UP
-  html5up.net | @ajlkn
-  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-  <head>
-    <title>Adomas Fiseris</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  </head>
-  <body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Adomas Fiseris · Data professional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Senior data analyst Adomas Fiseris – machine learning, risk intelligence, and data‑engineering portfolio." />
+  <link rel="canonical" href="https://adomasfiseris.github.io/" />
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Adomas Fiseris · Data professional" />
+  <meta property="og:description" content="Senior data analyst Adomas Fiseris – machine learning, risk intelligence, and data‑engineering portfolio." />
+  <meta property="og:url" content="https://adomasfiseris.github.io/" />
+  <meta property="og:image" content="https://adomasfiseris.github.io/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-      <!-- Header -->
-      <header id="header">
-        <div class="logo">
-          <span class="icon diamond-removed"></span>
-        </div>
-        <div class="content">
-          <div class="inner">
-            <h1>Adomas Fiseris</h1>
-            <p>Data Professional</p>
-          </div>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#resume">CV</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
+  <!-- Dimension core styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-      <!-- Main -->
-      <div id="main">
+  <!-- Inter font (performance‑optimised) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"></noscript>
 
-        <!-- About Me Section -->
-        <article id="home">
-          <h2 class="major">About Me</h2>
+  <!-- Custom overrides -->
+  <style>
+    /* typography */
+    body, input, select, textarea {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+    h1, h2, h3, h4, h5, h6, .button { text-transform: none !important; }
+    h1.major { letter-spacing: 0.02em !important; }
+    h2       { letter-spacing: 0.01em !important; }
+    h3, h4, h5, h6 { letter-spacing: 0.005em !important; }
 
-          <!-- Profile Image -->
-          <span class="image main">
-            <!-- Replace with your actual photo -->
-            <img src="images/YourPhoto.jpg" alt="Photo of Adomas Fiseris" style="width: 50%; height: auto;"/>
-          </span>
+    /* single‑page reveal */
+    #header { display: none !important; }
+    #main-wrapper, main, footer { display: block !important; opacity: 1 !important; transform: none !important; }
+    body.is-preload, body.is-preload * { animation: none !important; }
 
-          <!-- Concise Intro -->
-          <p>
-            I’m <strong>Adomas Fiseris</strong>, a Senior Data Analyst in 
-            Risk Intelligence at Citizens. My background includes building 
-            and maintaining data pipelines (Python-to-SQL, AWS Redshift) 
-            and leveraging machine learning models—ranging from tree-based 
-            ensembles to neural networks—to address real-world challenges 
-            in finance and healthcare.
-          </p>
+    /* link palette */
+    a { color: #0066cc; }
+    a:visited { color: #5a009d; }
+    a:hover, a:focus { text-decoration: underline; }
 
-          <!-- Areas of Expertise -->
-          <h3>Areas of Expertise</h3>
-			<ul>
-			<li>
-				<strong>Applied Machine Learning:</strong> Building and deploying predictive models 
-				using frameworks like <em>TensorFlow</em> and <em>scikit-learn</em>, 
-				incorporating advanced statistical techniques, natural language processing, 
-				and neural network architectures.
-			</li>
-			<li>
-				<strong>Data Engineering &amp; Best Practices:</strong> Designing robust, 
-				scalable pipelines with <em>AWS Redshift</em> and Python-to-SQL workflows, 
-				leveraging software engineering principles (unit testing, Git version control) 
-				to ensure maintainability and high data quality.
-			</li>
-			<li>
-				<strong>Time-Series Analysis:</strong> Forecasting and anomaly detection 
-				with methods such as <em>ARIMA</em> and <em>LSTM</em>, supporting 
-				complex sequential data insights in finance, operations, and beyond.
-			</li>
-			<li>
-				<strong>Domain-Focused Analytics:</strong> Specialized in risk intelligence 
-				and healthcare analytics, delivering data-driven solutions aligned 
-				with compliance requirements and industry best practices.
-			</li>
-		  </ul>
+    /* skip‑link (screen‑reader/keyboard) */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: #ffffff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      z-index: 1000;
+    }
+    .skip-link:focus { left: 0; }
 
-          <!-- Research Interests -->
-          <h3>Research Interests</h3>
-          <ul>
-            <li>Predictive modeling for financial risk and fraud detection</li>
-            <li>Interpretability of ML models for regulatory compliance</li>
-            <li>Optimizing data pipelines for large-scale analytics</li>
-          </ul>
+    /* project sections */
+    section.project { margin-bottom: 2rem; }
+    section.project h4 { margin-top: 0; }
 
-          <!-- Kaggle Competitions -->
-          <h3>Kaggle Competitions</h3>
+    /* hero image sizing */
+    #profile-pic { width: 35%; max-width: 300px; height: auto; }
+  </style>
+</head>
+<body class="is-preload">
+  <a href="#main-content" class="skip-link">skip to content</a>
 
-          <!-- Jane Street -->
-          <div class="project-block">
-            <h4>Jane Street Real-Time Market Data Forecasting</h4>
-            <p>
-              <strong>Objective:</strong> Develop robust models for non-stationary, 
-              fat-tailed market data. 
-              <br><strong>Highlight:</strong> Explored LSTM for time-series forecasting 
-              and optimized runtime to meet strict Kaggle code requirements.
-            </p>
-            <p>
-              <strong>Links:</strong><br>
-              <a href="https://www.kaggle.com/code/adomaslvu/jane-street-rtdf-lstm-training-notebook-2" target="_blank">LSTM Training Notebook</a><br>
-              <a href="https://www.kaggle.com/code/adomaslvu/jane-street-rtdf-lstm-submission-notebook-2" target="_blank">LSTM Submission Notebook</a>
-            </p>
-          </div>
+  <div id="wrapper">
+    <main id="main-content">
+      <article id="home">
+        <h1 class="major">adomas fiseris</h1>
+        <h2 style="margin-top:-1.2rem;">data professional</h2>
 
-          <!-- Home Credit -->
-          <div class="project-block">
-            <h4>Home Credit – Credit Risk Model Stability</h4>
-            <p>
-              <strong>Objective:</strong> Improve loan accessibility by developing 
-              ML scorecards for customers with limited credit histories. 
-              <br><strong>Highlight:</strong> Achieved stable accuracy 
-              under various data shifts, supporting more nuanced risk management.
-            </p>
-            <p>
-              <strong>Link:</strong>
-              <a href="https://www.kaggle.com/code/adomaslvu/homecreditcompetition-submission-notebook" target="_blank">GDBT Submission Notebook</a>
-            </p>
-          </div>
+        <!-- profile image -->
+        <span class="image main">
+          <img id="profile-pic" src="images/YourPhoto.jpg" alt="Portrait of Adomas Fiseris" loading="eager" />
+        </span>
 
-          <!-- Other Projects -->
-          <h3>Other Projects</h3>
-
-          <!-- Waze -->
-          <div class="project-block">
-            <h4>Waze User Churn Prediction with Tree-Based Models</h4>
-            <p>
-              <strong>Objective:</strong> Predict churn to guide user-retention strategies. 
-              <br><strong>Highlight:</strong> Leveraged gradient-boosted trees 
-              to identify at-risk users and propose feature enhancements for 
-              user engagement.
-            </p>
-            <p>
-              <strong>Link:</strong>
-              <a href="https://nbviewer.org/urls/AdomasFiseris.github.io/Waze_User_Churn/Waze%20User%20Churn%20Prediction%20with%20Tree-Based%20Models.ipynb" target="_blank">
-                View Project
-              </a>
-            </p>
-          </div>
-
-          <!-- DistilBERT -->
-          <div class="project-block">
-            <h4>Delving into Sentiment on YouTube: Fine-Tuning DistilBERT</h4>
-            <p>
-              <strong>Objective:</strong> Conduct NLP sentiment analysis on YouTube comments. 
-              <br><strong>Highlight:</strong> Demonstrated model scalability 
-              for large datasets and improved classification metrics via transfer learning.
-            </p>
-            <p>
-              <strong>Link:</strong>
-              <a href="https://github.com/AdomasFiseris/YoutubeCommentClassification" target="_blank">
-                View Project
-              </a>
-            </p>
-          </div>
-
-          <!-- Salifort -->
-          <div class="project-block">
-            <h4>Predictive Analysis: Employee Retention at Salifort Motors</h4>
-            <p>
-              <strong>Objective:</strong> Identify attrition factors in workforce data. 
-              <br><strong>Highlight:</strong> Created interpretability dashboards 
-              to help HR teams tailor retention strategies.
-            </p>
-            <p>
-              <strong>Link:</strong>
-              <a href="https://nbviewer.org/urls/AdomasFiseris.github.io/Salifort_Motors_Employee_Churn/Employee%20Retention%20Predictive%20Analysis%20for%20Salifort%20Motors.ipynb" target="_blank">
-                View Project
-              </a>
-            </p>
-          </div>
-        </article>
-
-        <!-- Curriculum Vitae (CV) -->
-        <article id="resume">
-          <h2 class="major">Curriculum Vitae (CV)</h2>
-
-          <h3>Work Experience</h3>
-          <p><strong>Sr. Data Analyst, AVP</strong><br>
-             Citizens (Full-time), July 2024 - Present<br>
-             Boston, Massachusetts, United States (Hybrid)</p>
-          <ul>
-            <li>Oversee batch-driven anomaly detection processes in the second line of defense, leveraging Python and SQL to identify atypical behaviors in financial data.</li>
-            <li>Maintain AWS Redshift data pipelines and design automated workflows for risk intelligence, ensuring comprehensive data ingestion and robust data checks.</li>
-            <li>Collaborate with cross-functional teams to interpret model outputs, provide actionable insights, and align analytics solutions with regulatory requirements.</li>
-          </ul>
-
-          <p><strong>Data Integrity Analyst II / Stem Cell Therapies Business Administration</strong><br>
-             Dana-Farber Cancer Institute, October 2022 - July 2024</p>
-          <ul>
-            <li>Utilized Python scripting in Visual Studio Code to merge and analyze diverse datasets (Epic, N-thrive, etc.), optimizing workflows for tracking donor-related charges.</li>
-            <li>Executed data integration with Pandas/NumPy to clean and enhance data quality, improving charge reconciliation efficiency by 15%.</li>
-            <li>Enhanced data integrity protocols, cutting service-to-billing time from 15 days to 9 and optimizing revenue streams.</li>
-          </ul>
-
-          <p><strong>Data Integrity Analyst I / Clinical Trials</strong><br>
-             Dana-Farber Cancer Institute, August 2018 - October 2022</p>
-          <!-- Removed bullet points as requested -->
-
-          <p><strong>Digital Review Team Analyst</strong><br>
-             Western Union Processing, September 2016 - January 2018</p>
-          <ul>
-            <li>Leveraged SQL and analytics to validate customer transactions, achieving a 98% accuracy rate in fraud detection.</li>
-            <li>Exceeded KPIs by identifying fraudulent transfers and adhering to rigorous KYC procedures.</li>
-          </ul>
-
-          <h3>Skills</h3>
-          <ul>
-            <li>Python, SQL (strong analytical and data interpretation)</li>
-            <li>Machine Learning: TensorFlow, scikit-learn, advanced statistical methods</li>
-            <li>Software engineering best practices (unit tests, Git-based version control)</li>
-            <li>Cloud-based data pipelines (AWS Redshift, S3), Airflow orchestration, and interactive analytics with Power BI.</li>
-          </ul>
-
-          <h3>Professional Certifications / Certificates</h3>
-          <p>
-            <strong>Machine Learning Specialization &mdash; Mar 2025</strong><br>
-			A foundational 3-course program by DeepLearning.AI and Stanford Online, taught by 
-			Andrew Ng, covering supervised/unsupervised learning, neural networks, and best 
-			practices for AI/ML model development in Python (NumPy, scikit-learn, TensorFlow).
-			<br><br>
-			<strong>CS229: Machine Learning (Stanford University) &mdash; Dec 2024</strong><br>
-			An in-depth introduction to machine learning and statistical pattern recognition, 
-			covering supervised (neural networks, SVMs), unsupervised (clustering, 
-			dimensionality reduction), and reinforcement learning. Taught by Professors 
-			Tengyu Ma and Chris Ré.
-			<br><br>
-			Microsoft Certified: Azure Enterprise Data Analyst Associate (Nov 2023)<br>
-			Microsoft Certified: Power BI Data Analyst Associate (Oct 2023)<br>
-			CompTIA Certified: Data+ (Oct 2023)
-          </p>
-
-          <h3>Education</h3>
-          <p>
-            <strong>Bachelor of Economics</strong><br>
-            ISM University of Management and Economics, Vilnius, Lithuania, June 2016<br>
-            GPA: 3.7<br>
-            Academic Honors: 100 Talent scholarship
-          </p>
-          <p>
-            University of Economics, VSE, Prague (Czech Republic), 
-            Erasmus exchange 2015 spring semester
-          </p>
-        </article>
-
-        <!-- Contact -->
-        <article id="contact">
-          <h2 class="major">Contact</h2>
-          <ul class="icons">
-            <li>
-              <a href="http://www.linkedin.com/in/adomas-fiseris-10577b156" class="icon brands fa-linkedin" target="_blank">
-                <span class="label">LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/AdomasFiseris" class="icon brands fa-github" target="_blank">
-                <span class="label">GitHub</span>
-              </a>
-            </li>
-          </ul>
-          <div>
-            <p>
-              Email: <a href="mailto:adomasfiseris@gmail.com">adomasfiseris@gmail.com</a><br>
-              Address: 61 Fountain Street, Framingham, MA
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <p class="copyright">
-          &copy; Adomas Fiseris. Design: 
-          <a href="https://html5up.net" target="_blank">HTML5 UP</a>.
+        <!-- github link under photo -->
+        <p style="text-align:center;margin-top:-1rem;">
+          <a class="button" href="https://github.com/AdomasFiseris" target="_blank" aria-label="GitHub portfolio of Adomas Fiseris">github portfolio</a>
         </p>
-      </footer>
-    </div>
 
-    <!-- BG -->
-    <div id="bg"></div>
+        <!-- introduction -->
+        <p>i’m <strong>adomas fiseris</strong>, a senior data analyst in risk intelligence at Citizens. my background spans building and maintaining data pipelines (Python→SQL, AWS Redshift) and leveraging machine‑learning models—from tree‑based ensembles to neural networks—to address challenges in finance and healthcare.</p>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+        <!-- areas of expertise -->
+        <h3>areas of expertise</h3>
+        <ul>
+          <li><strong>applied machine learning:</strong> building and deploying predictive models with <em>TensorFlow</em>, <em>scikit‑learn</em>, NLP, and deep‑learning architectures.</li>
+          <li><strong>data engineering &amp; best practices:</strong> scalable pipelines on <em>AWS Redshift</em>, Python‑to‑SQL workflows, unit testing, and Git version control.</li>
+          <li><strong>time‑series analysis:</strong> forecasting &amp; anomaly detection with <em>ARIMA</em>, <em>LSTM</em>, and other sequential‑data methods.</li>
+          <li><strong>domain‑focused analytics:</strong> risk intelligence and healthcare analytics, aligned with regulatory and industry standards.</li>
+        </ul>
 
-  </body>
-</html>
+        <!-- research interests -->
+        <h3>research interests</h3>
+        <ul>
+          <li>predictive modeling for financial risk and fraud detection</li>
+          <li>interpretability of ML models for regulatory compliance</li>
+          <li>optimising data pipelines for large‑scale analytics</li>
+        </ul>
+
+        <!-- kaggle competitions -->
+        <h3>kaggle competitions</h3>
+        <section class="project">
+          <h4>jane street real‑time market data forecasting</h4>
+          <p><strong>objective:</strong> develop robust models for non‑stationary, fat‑tailed market data.<br><strong>highlight:</strong> explored LSTM forecasting and optimised runtime for Kaggle constraints.</p>
+          <p><strong>links:</strong><br><a href="https://www.kaggle.com/code/adomaslvu/jane-street-rtdf-lstm-training-notebook-2" target="_blank">LSTM training notebook</a><br><a href="https://www.kaggle.com/code/adomaslvu/jane-street-rtdf-lstm-submission-notebook-2" target="_blank">LSTM submission notebook</a></p>
+        </section>
+        <section class="project">
+          <h4>home credit – credit risk model stability</h4>
+          <p><strong>objective:</strong> improve loan accessibility by developing ML scorecards for customers with limited credit histories.<br><strong>highlight:</strong> achieved stable accuracy under various data shifts.</p>
+          <p><strong>link:</strong> <a href="https://www.kaggle.com/code/adomaslvu/homecreditcompetition-submission-notebook" target="_blank">GBDT submission notebook</a></p>
+        </section>
+
+        <!-- other projects -->
+        <h3>other projects</h3>
+        <section class="project">
+          <h4>Waze user churn prediction with tree‑based models</h4>
+          <p><strong>objective:</strong> predict churn to guide user‑retention strategies.</p>
+          <p><strong>link:</strong> <a href="https://nbviewer.org/urls/AdomasFiseris.github.io/Waze_User_Churn/Waze%20User%20Churn%20Prediction%20with%20Tree‑Based%20Models.ipynb" target="_blank">view project</a></p>
+        </section>
+        <section class="project">
+          <h4>delving into sentiment on YouTube: fine‑tuning DistilBERT</h4>
+          <p><strong>objective:</strong> NLP sentiment analysis on YouTube comments.</p>
+          <p><strong>link:</strong> <a href="https://github.com/AdomasFiseris/YoutubeCommentClassification" target="_blank">view project</a></p>
+        </section>
+        <section class="project">
+          <h4>predictive analysis: employee retention at Salifort Motors</h4>
+          <p><strong>objective:</strong> identify attrition factors in workforce data.</p>
+          <p><strong>link:</strong> <a href="https://nbviewer.org/urls/AdomasFiseris.github.io/Salifort_Motors_Employee_Churn/Employee%20Retention%20Predictive%20Analysis%20for%20Salifort%20Motors.ipynb" target="_blank">view project</a></p>
+        </section>
+
+        <!-- cv download -->
+        <h3>curriculum vitae</h3>
+        <p><a class="button icon solid fa-download" href="assets/Adomas_Fiseris_CV.pdf" download aria-label="Download PDF CV (150 KB)">download cv (pdf)</a></p>
+      </article>
+    </main>
+
+    <!-- footer with contact info -->
+    <footer>
+      <section id="contact-info">
+        <ul class="icons">
+          <li><a href="https://www.linkedin.com/in/adomas-fiseris-10577b156" class="icon brands fa-linkedin" target="_blank" aria-label="LinkedIn profile of Adomas Fiseris"><span class
