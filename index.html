@@ -4,17 +4,21 @@
   <meta charset="utf-8" />
   <title>Adomas Fiseris | Data Scientist, AVP at Citizens</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Data Scientist focused on second line of defense risk intelligence at a regional bank." />
+  <meta name="description" content="Risk data scientist at Citizens building compliant ML pipelines for consumer banking; focused on streaming inference, observability, and production validation." />
   <meta name="keywords" content="risk data science, compliance analytics, machine learning, Kaggle, banking, MLOps, streaming inference" />
   <link rel="canonical" href="https://adomasfiseris.github.io/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Adomas Fiseris | Data Scientist, AVP at Citizens" />
-  <meta property="og:description" content="Data Scientist focused on second line of defense risk intelligence at a regional bank." />
+  <meta property="og:description" content="Risk data scientist at Citizens building compliant ML pipelines for consumer banking; focused on streaming inference, observability, and production validation." />
   <meta property="og:url" content="https://adomasfiseris.github.io/" />
-  <meta property="og:image" content="https://adomasfiseris.github.io/images/YourPhoto.jpg" />
+  <meta property="og:image" content="https://adomasfiseris.github.io/images/bg.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://adomasfiseris.github.io/images/bg.jpg" />
 
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -23,119 +27,24 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"></noscript>
 
-  <style>
-    body, input, select, textarea {
-      font-family: 'Inter', sans-serif !important;
-      font-size: 17px;
-      line-height: 1.7;
-      color: #fafbfd;
-      background: #050608;
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adomas Fiseris",
+      "jobTitle": "Data Scientist, AVP",
+      "url": "https://adomasfiseris.github.io/",
+      "image": "https://adomasfiseris.github.io/images/bg.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/adomas-fiseris-10577b156",
+        "https://github.com/AdomasFiseris"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Citizens"
+      }
     }
-    h1, h2, h3, h4, h5, h6, .button { text-transform: none !important; color: #fafbfd; }
-    h1.major { letter-spacing: 0.02em !important; font-size: 2.3rem; margin-bottom: 0.35rem; text-decoration: none; }
-    h2 { letter-spacing: 0.01em !important; font-weight: 600; color: #fafbfd; text-decoration: none; margin-top: 0.2rem; margin-bottom: 0.4rem; }
-    h3, h4, h5, h6 { letter-spacing: 0.005em !important; color: #f1f5f9; text-decoration: none; }
-    section.project h4 { font-size: 1.08rem; }
-    .project h4 { text-decoration: none; }
-
-    #header { display: none !important; }
-    #main-wrapper, main, footer { display: block !important; opacity: 1 !important; transform: none !important; }
-    body.is-preload, body.is-preload * { animation: none !important; }
-
-    a { color: #9acbff; }
-    a:visited { color: #cfd4ff; }
-    a:hover, a:focus { text-decoration: underline; color: #eaf2ff; }
-
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: 0;
-      background: #0f1116;
-      color: #f8fafc;
-      padding: 0.55rem 1rem;
-      z-index: 1000;
-      border-radius: 6px;
-    }
-    .skip-link:focus { left: 0; }
-
-    #wrapper { padding: 0 0 3rem 0; }
-    #home { max-width: 1040px; margin: 0 auto; padding: 2.25rem 1.25rem 3rem; }
-
-    section.project { margin-bottom: 2rem; background: #0c0f15; padding: 1.25rem 1.4rem; border-radius: 12px; border: 1px solid #1b2330; box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
-    section.project h4 { margin-top: 0; }
-
-    #profile-pic { width: 32%; max-width: 260px; height: auto; border-radius: 12px; box-shadow: 0 12px 28px rgba(0,0,0,0.45); }
-    .pill { display: inline-block; padding: 0.32rem 0.7rem; margin: 0 0.35rem 0.35rem 0; border-radius: 999px; background: rgba(255,255,255,0.08); color: #f6f7fb; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.14); }
-    .section-heading { margin: 1.4rem 0 0.35rem; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.95rem; color: #fafbfd; }
-    .section-lead { margin-top: 0; color: #e2e8f0; }
-
-    /* layout helpers for readability */
-    .intro-narrow {
-      max-width: 40rem;
-      margin: 0 0 1.9rem 0;
-      text-align: left;
-      font-size: 1rem;
-      color: #fafbfd;
-    }
-    .project-body {
-      font-size: 0.98rem;
-      line-height: 1.75;
-      max-width: 46rem;
-      margin: 0.35rem 0 0 0;
-      color: #f1f5f9;
-    }
-    .project-body p { margin: 0.45rem 0; }
-    .project-body ul { margin: 0.45rem 0 0.2rem 1.15rem; }
-    .project-body li { margin: 0.2rem 0; }
-
-    /* collapsible project details */
-    details.project-details {
-      margin-top: 0.5rem;
-      border-top: 1px solid #1b2330;
-      padding-top: 0.6rem;
-    }
-    details.project-details summary {
-      cursor: pointer;
-      list-style: none;
-      color: #e5edff;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-    details.project-details summary::-webkit-details-marker { display: none; }
-    details.project-details[open] summary { color: #fafbfd; }
-    details.project-details summary .chevron {
-      display: inline-block;
-      transition: transform 0.2s ease;
-      font-size: 0.9rem;
-    }
-    details.project-details[open] summary .chevron { transform: rotate(90deg); }
-
-    /* align main text with image edge */
-    #home > h3,
-    #home > p,
-    #home > ul,
-    #home > section.project,
-    #home > .section-lead {
-      max-width: 46rem;
-      margin-left: 0;
-    }
-    
-    /* education spacing */
-    .edu-heading {
-      margin-top: 2rem;
-    }
-
-    /* top contact shortcuts */
-    .contact-top {
-      margin: 0.4rem 0 1.4rem 0;
-    }
-    .contact-top ul.icons {
-      margin: 0;
-    }
-  </style>
+  </script>
 </head>
 <body class="is-preload">
   <a href="#main-content" class="skip-link">skip to content</a>
@@ -148,19 +57,25 @@
 
         <div class="contact-top">
           <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/adomas-fiseris-10577b156" class="icon brands fa-linkedin" target="_blank" aria-label="LinkedIn profile of Adomas Fiseris"><span class="label">LinkedIn</span></a></li>
-            <li><a href="https://github.com/AdomasFiseris" class="icon brands fa-github" target="_blank" aria-label="GitHub profile of Adomas Fiseris"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/adomas-fiseris-10577b156" class="icon brands fa-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile of Adomas Fiseris"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/AdomasFiseris" class="icon brands fa-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile of Adomas Fiseris"><span class="label">GitHub</span></a></li>
             <li><a href="mailto:adomasfiseris@gmail.com" class="icon solid fa-envelope" aria-label="Email Adomas Fiseris"><span class="label">Email</span></a></li>
           </ul>
         </div>
 
+        <nav class="page-nav" aria-label="Section navigation">
+          <a href="#education">Education</a>
+          <a href="#competitions">Competitions</a>
+          <a href="#core-stack">Core stack</a>
+        </nav>
+
         <span class="image main">
-          <img id="profile-pic" src="images/YourPhoto.jpg" alt="Portrait of Adomas Fiseris" loading="eager" />
+          <img id="profile-pic" src="images/YourPhoto.jpg" alt="Portrait of Adomas Fiseris in a dark background" loading="eager" />
         </span>
 
         <p class="intro-narrow">I’m a risk data scientist and AVP at Citizens focused on consumer bank compliance and operational risk analytics. I design and orchestrate end-to-end Python and SQL pipelines on a cloud-native analytics platform to turn large-scale transaction data into production-ready risk scores and decision tools. My work blends feature engineering and model development on modern ML frameworks with scalable ETL, rigorous data quality monitoring, and audit-ready validation in partnership with Risk, Compliance, and Engineering teams. I keep my practice sharp through Kaggle competitions, benchmarking new methods and bringing proven ideas back into regulated production environments.</p>
 
-        <h3 class="section-heading edu-heading">Education</h3>
+        <h3 class="section-heading edu-heading" id="education">Education</h3>
         <p class="section-lead">Current focus: NLP for conduct risk, streaming inference, production observability.</p>
         <section class="project">
           <h4>Georgia Tech</h4>
@@ -180,7 +95,7 @@
           </div>
         </section>
 
-        <h3 class="section-heading">Kaggle &amp; Trading Competitions</h3>
+        <h3 class="section-heading" id="competitions">Kaggle &amp; Trading Competitions</h3>
         <section class="project">
           <h4>Hull Tactical - Market Prediction (Kaggle 2025)</h4>
           <div class="project-body">
@@ -209,7 +124,7 @@
                 <li>VolGovernor tracks an EWMA of strategy variance versus market variance and scales allocations to target the 1.2x volatility cap.</li>
                 <li>Daily loop: compute ensemble_pred, apply SmoothRegimePolicy, adjust with VolGovernor, clip to [0, 2], and return allocation to the API.</li>
               </ul>
-              <p><strong>Link:</strong> <a href="https://www.kaggle.com/code/adomaslvu/hull-tactical-market-prediction-6-0?scriptVersionId=282978321" target="_blank">Kaggle submission notebook</a></p>
+              <p><strong>Link:</strong> <a href="https://www.kaggle.com/code/adomaslvu/hull-tactical-market-prediction-6-0?scriptVersionId=282978321" target="_blank" rel="noopener noreferrer">Kaggle submission notebook</a></p>
             </details>
           </div>
         </section>
@@ -229,7 +144,7 @@
                 <li><strong>Ensemble:</strong> ModernBERT-base sequence classifier (64 class focus) with templated question, answer, explanation, plus a correctness token, DeepSeek 7B classifier over the full label set, and Gemma2-9B IT with LoRA adapters and a compact correctness prompt.</li>
                 <li><strong>Fusion and decoding:</strong> log probability blends (60% DeepSeek, 35% Gemma2-9B IT, 5% ModernBERT) with top three labels selected from the unified space.</li>
               </ul>
-              <p><strong>Link:</strong> <a href="https://www.kaggle.com/code/adomaslvu/map-gemma-mbert-deepseek-submission-2?scriptVersionId=266234776" target="_blank">Kaggle submission notebook</a></p>
+              <p><strong>Link:</strong> <a href="https://www.kaggle.com/code/adomaslvu/map-gemma-mbert-deepseek-submission-2?scriptVersionId=266234776" target="_blank" rel="noopener noreferrer">Kaggle submission notebook</a></p>
             </details>
           </div>
         </section>
@@ -257,7 +172,7 @@
                 <li>Neural network with three dense layers (256 to 32 to 64), GELU activations, dropout around 0.17, early stopping via SciKeras.</li>
               </ul>
               <p><strong>Ensemble:</strong> Ridge stack on out of fold predictions from XGBoost, CatBoost, and the neural network to produce the final leaderboard submission.</p>
-              <p><strong>Link:</strong> <a href="https://github.com/AdomasFiseris/Kaggle-Playground" target="_blank">GitHub repo</a> (modeling done outside Kaggle, CSV predictions submitted).</p>
+              <p><strong>Link:</strong> <a href="https://github.com/AdomasFiseris/Kaggle-Playground" target="_blank" rel="noopener noreferrer">GitHub repo</a> (modeling done outside Kaggle, CSV predictions submitted).</p>
             </details>
           </div>
         </section>
@@ -279,12 +194,12 @@
               <p><strong>XGBoost setup:</strong> histogram tree method, tuned with Optuna (max_depth 4, learning_rate about 0.10, subsample about 0.71, colsample_bytree about 0.73, gamma about 0.26), trained around 75 rounds with early stopping; best public and private score was 0.006171.</p>
               <p><strong>Two layer LSTM:</strong> two LSTM layers with 32 hidden units each followed by a dense head, dropout about 0.4, sequence length 1. Trained with weighted MSE, Adam at lr 5e-5 and weight decay 1e-3, early stopping on weighted R squared. Best LSTM score was about 0.004329, lagged responder variant slightly negative.</p>
               <p><strong>Ensembling:</strong> no blend deployed in the final submission; compared tree and RNN families to understand when trees dominate short-horizon market data. Future work notes include blending XGBoost and LSTM for regime diversification.</p>
-              <p><strong>Link:</strong> <a href="https://github.com/AdomasFiseris/JaneStreetRTMDForecasting" target="_blank">GitHub repo</a> for the local modeling code and utilities.</p>
+              <p><strong>Link:</strong> <a href="https://github.com/AdomasFiseris/JaneStreetRTMDForecasting" target="_blank" rel="noopener noreferrer">GitHub repo</a> for the local modeling code and utilities.</p>
             </details>
           </div>
         </section>
 
-        <h3 class="section-heading">Core stack</h3>
+        <h3 class="section-heading" id="core-stack">Core stack</h3>
         <p>
           <span class="pill"><strong>Cloud:</strong> AWS (EC2 · RDS · S3 · SageMaker)</span>
           <span class="pill"><strong>Data:</strong> PostgreSQL</span>
@@ -301,10 +216,10 @@
     <footer></footer>
   </div>
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

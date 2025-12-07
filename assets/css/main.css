@@ -1775,4 +1775,256 @@ input, select, textarea {
 			background-color: transparent !important;  /* Remove black tint */
 			opacity: 0 !important;              /* Ensure no leftover opacity */
 		}
+
+		/* Custom overrides for portfolio layout */
+		body, input, select, textarea {
+			font-family: 'Inter', sans-serif !important;
+			font-size: 17px;
+			line-height: 1.7;
+			color: #fafbfd;
+			background: #050608;
+		}
+
+		h1, h2, h3, h4, h5, h6, .button {
+			text-transform: none !important;
+			color: #fafbfd;
+		}
+
+		h1.major {
+			letter-spacing: 0.02em !important;
+			font-size: 2.3rem;
+			margin-bottom: 0.35rem;
+			text-decoration: none;
+		}
+
+		h2 {
+			letter-spacing: 0.01em !important;
+			font-weight: 600;
+			color: #fafbfd;
+			text-decoration: none;
+			margin-top: 0.2rem;
+			margin-bottom: 0.4rem;
+		}
+
+		h3, h4, h5, h6 {
+			letter-spacing: 0.005em !important;
+			color: #f1f5f9;
+			text-decoration: none;
+		}
+
+		section.project h4 {
+			font-size: 1.08rem;
+		}
+
+		.project h4 {
+			text-decoration: none;
+		}
+
+		#header {
+			display: none !important;
+		}
+
+		#main-wrapper, main, footer {
+			display: block !important;
+			opacity: 1 !important;
+			transform: none !important;
+		}
+
+		body.is-preload, body.is-preload * {
+			animation: none !important;
+		}
+
+		a {
+			color: #9acbff;
+			border-bottom: none;
+		}
+
+		a:visited {
+			color: #cfd4ff;
+		}
+
+		a:hover, a:focus {
+			text-decoration: underline;
+			color: #eaf2ff;
+			border-bottom: none;
+		}
+
+		.skip-link {
+			position: absolute;
+			left: -999px;
+			top: 0;
+			background: #0f1116;
+			color: #f8fafc;
+			padding: 0.55rem 1rem;
+			z-index: 1000;
+			border-radius: 6px;
+		}
+
+		.skip-link:focus {
+			left: 0;
+		}
+
+		#wrapper {
+			padding: 0 0 3rem 0;
+		}
+
+		#home {
+			max-width: 1040px;
+			margin: 0 auto;
+			padding: 2.25rem 1.25rem 3rem;
+		}
+
+		section.project {
+			margin-bottom: 2rem;
+			background: #0c0f15;
+			padding: 1.25rem 1.4rem;
+			border-radius: 12px;
+			border: 1px solid #1b2330;
+			box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+		}
+
+		section.project h4 {
+			margin-top: 0;
+		}
+
+		.page-nav {
+			margin: 0 0 1.2rem 0;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.65rem;
+		}
+
+		.page-nav a {
+			background: rgba(255, 255, 255, 0.06);
+			padding: 0.4rem 0.75rem;
+			border-radius: 999px;
+			color: #e5edff;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			font-weight: 600;
+			letter-spacing: 0.01em;
+		}
+
+		.page-nav a:hover,
+		.page-nav a:focus {
+			color: #0b1623;
+			background: #cfe5ff;
+			border-color: #cfe5ff;
+			text-decoration: none;
+		}
+
+		#profile-pic {
+			width: 32%;
+			max-width: 260px;
+			height: auto;
+			border-radius: 12px;
+			box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+		}
+
+		.pill {
+			display: inline-block;
+			padding: 0.32rem 0.7rem;
+			margin: 0 0.35rem 0.35rem 0;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, 0.08);
+			color: #f6f7fb;
+			font-size: 0.95rem;
+			border: 1px solid rgba(255, 255, 255, 0.14);
+		}
+
+		.section-heading {
+			margin: 1.4rem 0 0.35rem;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			font-size: 0.95rem;
+			color: #fafbfd;
+		}
+
+		.section-lead {
+			margin-top: 0;
+			color: #e2e8f0;
+		}
+
+		.intro-narrow {
+			max-width: 40rem;
+			margin: 0 0 1.9rem 0;
+			text-align: left;
+			font-size: 1rem;
+			color: #fafbfd;
+		}
+
+		.project-body {
+			font-size: 0.98rem;
+			line-height: 1.75;
+			max-width: 46rem;
+			margin: 0.35rem 0 0 0;
+			color: #f1f5f9;
+		}
+
+		.project-body p {
+			margin: 0.45rem 0;
+		}
+
+		.project-body ul {
+			margin: 0.45rem 0 0.2rem 1.15rem;
+		}
+
+		.project-body li {
+			margin: 0.2rem 0;
+		}
+
+		details.project-details {
+			margin-top: 0.5rem;
+			border-top: 1px solid #1b2330;
+			padding-top: 0.6rem;
+		}
+
+		details.project-details summary {
+			cursor: pointer;
+			list-style: none;
+			color: #e5edff;
+			font-weight: 600;
+			letter-spacing: 0.01em;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.35rem;
+		}
+
+		details.project-details summary::-webkit-details-marker {
+			display: none;
+		}
+
+		details.project-details[open] summary {
+			color: #fafbfd;
+		}
+
+		details.project-details summary .chevron {
+			display: inline-block;
+			transition: transform 0.2s ease;
+			font-size: 0.9rem;
+		}
+
+		details.project-details[open] summary .chevron {
+			transform: rotate(90deg);
+		}
+
+		#home > h3,
+		#home > p,
+		#home > ul,
+		#home > section.project,
+		#home > .section-lead {
+			max-width: 46rem;
+			margin-left: 0;
+		}
+
+		.edu-heading {
+			margin-top: 2rem;
+		}
+
+		.contact-top {
+			margin: 0.4rem 0 1.4rem 0;
+		}
+
+		.contact-top ul.icons {
+			margin: 0;
+		}
 		
