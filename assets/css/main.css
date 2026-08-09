@@ -1866,6 +1866,9 @@ input, select, textarea {
 
 		#wrapper {
 			padding: 0 0 3rem 0;
+			background:
+				radial-gradient(circle at 85% 10%, rgba(55, 115, 180, 0.14), transparent 27rem),
+				radial-gradient(circle at 5% 40%, rgba(87, 55, 156, 0.1), transparent 24rem);
 		}
 
 		#home {
@@ -1881,6 +1884,13 @@ input, select, textarea {
 			border-radius: 12px;
 			border: 1px solid #1b2330;
 			box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+			transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+		}
+
+		section.project:hover {
+			border-color: #315375;
+			box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42);
+			transform: translateY(-2px);
 		}
 
 		section.project h4 {
@@ -2027,4 +2037,24 @@ input, select, textarea {
 		.contact-top ul.icons {
 			margin: 0;
 		}
-		
+
+		@media screen and (max-width: 736px) {
+			#home {
+				padding-top: 1.5rem;
+			}
+
+			#profile-pic {
+				width: min(72%, 260px);
+			}
+
+			section.project {
+				padding: 1.1rem;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			section.project,
+			details.project-details summary .chevron {
+				transition: none;
+			}
+		}

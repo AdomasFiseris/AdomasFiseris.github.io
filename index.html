@@ -70,18 +70,19 @@
         </nav>
 
         <span class="image main">
-          <img id="profile-pic" src="images/YourPhoto.jpg" alt="Portrait of Adomas Fiseris in a dark background" loading="eager" />
+          <img id="profile-pic" src="images/YourPhoto.jpg" alt="Portrait of Adomas Fiseris against a dark background" loading="eager" />
         </span>
 
         <p class="intro-narrow">I’m a risk data scientist and AVP at Citizens focused on consumer bank compliance and operational risk analytics. I design and orchestrate end-to-end Python and SQL pipelines on a cloud-native analytics platform to turn large-scale transaction data into production-ready risk scores and decision tools. My work blends feature engineering and model development on modern ML frameworks with scalable ETL, rigorous data quality monitoring, and audit-ready validation in partnership with Risk, Compliance, and Engineering teams. I keep my practice sharp through Kaggle competitions, benchmarking new methods and bringing proven ideas back into regulated production environments.</p>
 
+        <p class="section-lead focus-line">Current focus: NLP for conduct risk, streaming inference, production observability.</p>
+
         <h3 class="section-heading edu-heading" id="education">Education</h3>
-        <p class="section-lead">Current focus: NLP for conduct risk, streaming inference, production observability.</p>
         <section class="project">
           <h4>Georgia Tech</h4>
           <div class="project-body">
             <p><strong>Program:</strong> Master of Science in Analytics, Computational Track - Data Science and ML</p>
-            <p><strong>Start:</strong> January 2026 (two-year program)</p>
+            <p><strong>Dates:</strong> January 2026–present</p>
           </div>
         </section>
         <section class="project">
@@ -97,10 +98,10 @@
 
         <h3 class="section-heading" id="competitions">Kaggle &amp; Trading Competitions</h3>
         <section class="project">
-          <h4>Hull Tactical - Market Prediction (Kaggle 2025)</h4>
+          <h4>Hull Tactical - Market Prediction (Kaggle 2025–2026)</h4>
           <div class="project-body">
-            <p><strong>Competition:</strong> Kaggle Hull Tactical: Market Prediction | <strong>Placement:</strong> Pending (competition active) | <strong>Best public score:</strong> 0.494 (Sharpe-like metric)</p>
-            <p><strong>Approach:</strong> streaming ensemble of LightGBM and ElasticNet with a volatility aware allocation policy.</p>
+            <p><strong>Competition:</strong> Kaggle Hull Tactical: Market Prediction | <strong>Placement:</strong> 551/3,677 | <strong>Final score:</strong> 1.554 (Hull Competition Sharpe)</p>
+            <p><strong>Approach:</strong> streaming ensemble of LightGBM and ElasticNet with a volatility-aware allocation policy.</p>
             <details class="project-details" open>
               <summary><span class="chevron">▶</span> Full details</summary>
               <p><strong>Overview:</strong> predict daily S&P 500 excess returns and convert them into allocations between 0 and 2 while staying within 120% of index volatility. Kaggle evaluation streams one day at a time via the API to prevent lookahead.</p>
@@ -118,9 +119,9 @@
                 <li>Four ElasticNet regressions serialized as coefficient and intercept bundles, averaged into a linear signal.</li>
                 <li>Blend as ensemble_pred = w_lgb * lgb_mean + w_enet * elastic_mean with weights tuned offline.</li>
               </ul>
-              <p><strong>Volatility aware allocation:</strong></p>
+              <p><strong>Volatility-aware allocation:</strong></p>
               <ul>
-                <li>SmoothRegimePolicy maps predicted excess return to allocation using a leverage coefficient k_t based on rolling volatility (lagged_forward_returns__vol__w21). Low volatility means higher sensitivity, high volatility de leverages automatically.</li>
+                <li>SmoothRegimePolicy maps predicted excess return to allocation using a leverage coefficient k_t based on rolling volatility (lagged_forward_returns__vol__w21). Low volatility means higher sensitivity; high volatility de-leverages automatically.</li>
                 <li>VolGovernor tracks an EWMA of strategy variance versus market variance and scales allocations to target the 1.2x volatility cap.</li>
                 <li>Daily loop: compute ensemble_pred, apply SmoothRegimePolicy, adjust with VolGovernor, clip to [0, 2], and return allocation to the API.</li>
               </ul>
@@ -140,8 +141,8 @@
               <p><strong>Modeling strategy:</strong></p>
               <ul>
                 <li><strong>Unified label space:</strong> canonical Category:Misconception set, normalized label variants, and reindexed outputs into a shared class order before fusion.</li>
-                <li><strong>Correctness aware inputs:</strong> derived question level correctness flags and injected them as text prompts and ModernBERT special tokens to guide predictions.</li>
-                <li><strong>Ensemble:</strong> ModernBERT-base sequence classifier (64 class focus) with templated question, answer, explanation, plus a correctness token, DeepSeek 7B classifier over the full label set, and Gemma2-9B IT with LoRA adapters and a compact correctness prompt.</li>
+                <li><strong>Correctness-aware inputs:</strong> derived correctness flags from the supplied question and answer fields, then injected them as text prompts and ModernBERT special tokens to guide predictions.</li>
+                <li><strong>Ensemble:</strong> ModernBERT-base sequence classifier with templated question, answer, explanation, plus a correctness token, DeepSeek 7B classifier over the full label set, and Gemma2-9B IT with LoRA adapters and a compact correctness prompt.</li>
                 <li><strong>Fusion and decoding:</strong> log probability blends (60% DeepSeek, 35% Gemma2-9B IT, 5% ModernBERT) with top three labels selected from the unified space.</li>
               </ul>
               <p><strong>Link:</strong> <a href="https://www.kaggle.com/code/adomaslvu/map-gemma-mbert-deepseek-submission-2?scriptVersionId=266234776" target="_blank" rel="noopener noreferrer">Kaggle submission notebook</a></p>
@@ -165,13 +166,13 @@
                 <li>Mifflin-St Jeor BMR as a sex-specific basal metabolic rate estimate.</li>
                 <li>One hot encoding for Sex where needed.</li>
               </ul>
-              <p><strong>Base models (Optuna tuned, 5-fold CV):</strong></p>
+              <p><strong>Base models (Optuna-tuned, 5-fold cross-validation):</strong></p>
               <ul>
                 <li>CatBoost with depth 10, about 1.6k trees, learning rate around 0.083.</li>
-                <li>XGBoost with histogram based trees, tuned depth, learning rate, and regularization.</li>
+                <li>XGBoost with histogram-based trees, tuned depth, learning rate, and regularization.</li>
                 <li>Neural network with three dense layers (256 to 32 to 64), GELU activations, dropout around 0.17, early stopping via SciKeras.</li>
               </ul>
-              <p><strong>Ensemble:</strong> Ridge stack on out of fold predictions from XGBoost, CatBoost, and the neural network to produce the final leaderboard submission.</p>
+              <p><strong>Ensemble:</strong> Ridge meta-learner trained on out-of-fold predictions from XGBoost, CatBoost, and the neural network to produce the final leaderboard submission.</p>
               <p><strong>Link:</strong> <a href="https://github.com/AdomasFiseris/Kaggle-Playground" target="_blank" rel="noopener noreferrer">GitHub repo</a> (modeling done outside Kaggle, CSV predictions submitted).</p>
             </details>
           </div>
@@ -180,19 +181,19 @@
         <section class="project">
           <h4>Jane Street Real-Time Market Data Forecasting (Kaggle 2024-2025)</h4>
           <div class="project-body">
-            <p><strong>Competition:</strong> Kaggle Jane Street Real-Time Market Data Forecasting | <strong>Placement:</strong> N/A (submission failed in later test phases) | <strong>Best leaderboard score:</strong> 0.006171 weighted R squared on responder_6</p>
-            <p><strong>Models:</strong> XGBoost gradient boosted trees and a two layer LSTM evaluated separately, with the XGBoost run producing the top score.</p>
+            <p><strong>Competition:</strong> Kaggle Jane Street Real-Time Market Data Forecasting | <strong>Placement:</strong> N/A (submission failed in later test phases) | <strong>Best observed leaderboard score:</strong> 0.006171 weighted zero-mean R² on responder_6</p>
+            <p><strong>Models:</strong> XGBoost gradient-boosted trees and a two-layer LSTM evaluated separately, with the XGBoost run producing the top score.</p>
             <details class="project-details">
               <summary><span class="chevron">▶</span> Full details</summary>
               <p><strong>Overview:</strong> real-time responder_6 forecasting on roughly 4.5 million rows per phase with 79 anonymized features and nine responders. Submission is via the streaming evaluation API with strict runtime constraints, reflecting non-stationary, heavy-tailed market data and evolving private tests.</p>
               <p><strong>Data and validation:</strong></p>
               <ul>
-                <li>Used 79 raw features plus optional one day lags of all responders from lags.parquet, keeping feature engineering minimal to avoid regime overfitting and to stay within memory and time limits.</li>
+                <li>Used 79 raw features plus optional one-day lags of all responders from lags.parquet, keeping feature engineering minimal to avoid regime overfitting and to stay within memory and time limits.</li>
                 <li>Chronological validation: trained on early periods and held out about the last 100 days as a pseudo live set to mirror leaderboard behavior.</li>
-                <li>Implemented the official weighted zero mean R squared metric inside XGBoost and PyTorch loops for early stopping and aligned model selection.</li>
+                <li>Implemented the official weighted zero-mean R² metric inside XGBoost and PyTorch loops for early stopping and aligned model selection.</li>
               </ul>
-              <p><strong>XGBoost setup:</strong> histogram tree method, tuned with Optuna (max_depth 4, learning_rate about 0.10, subsample about 0.71, colsample_bytree about 0.73, gamma about 0.26), trained around 75 rounds with early stopping; best public and private score was 0.006171.</p>
-              <p><strong>Two layer LSTM:</strong> two LSTM layers with 32 hidden units each followed by a dense head, dropout about 0.4, sequence length 1. Trained with weighted MSE, Adam at lr 5e-5 and weight decay 1e-3, early stopping on weighted R squared. Best LSTM score was about 0.004329, lagged responder variant slightly negative.</p>
+              <p><strong>XGBoost setup:</strong> histogram tree method, tuned with Optuna (max_depth 4, learning_rate about 0.10, subsample about 0.71, colsample_bytree about 0.73, gamma about 0.26), trained around 75 rounds with early stopping; best observed leaderboard score was 0.006171.</p>
+              <p><strong>Two-layer LSTM:</strong> two LSTM layers with 32 hidden units each followed by a dense head, dropout about 0.4, sequence length 1. Trained with weighted MSE, Adam at lr 5e-5 and weight decay 1e-3, early stopping on weighted zero-mean R². Best LSTM score was about 0.004329; the lagged-responder variant was slightly negative.</p>
               <p><strong>Ensembling:</strong> no blend deployed in the final submission; compared tree and RNN families to understand when trees dominate short-horizon market data. Future work notes include blending XGBoost and LSTM for regime diversification.</p>
               <p><strong>Link:</strong> <a href="https://github.com/AdomasFiseris/JaneStreetRTMDForecasting" target="_blank" rel="noopener noreferrer">GitHub repo</a> for the local modeling code and utilities.</p>
             </details>
